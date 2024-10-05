@@ -21,7 +21,7 @@ def translate_text(request: TranslationRequest, db: Session = Depends(get_db)) -
 
     try:
         translator = translator_factory.get_translator(source_language, target_language)
-        translated_text = translator.translate(source_text, target_language, source_language)
+        translated_text = translator.translate(source_text)
     except ValueError as ve:
         logger.error(f"Translation error: {ve}")
         raise HTTPException(status_code=400, detail=str(ve))

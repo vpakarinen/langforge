@@ -34,9 +34,29 @@ class Translator:
 class TranslatorFactory:
     """ Factory to provide default translator instance """
     def __init__(self):
-        self.translator = Translator(self.default_model)
+        self.translators = {}
 
-    default_model = "Helsinki-NLP/opus-mt-en-es"
+    available_models = {
+        ("en", "es"): "Helsinki-NLP/opus-mt-en-es",
+        ("en", "fr"): "Helsinki-NLP/opus-mt-en-fr",
+        ("en", "de"): "Helsinki-NLP/opus-mt-en-de",
+        ("en", "it"): "Helsinki-NLP/opus-mt-en-it",
+        ("en", "zh"): "Helsinki-NLP/opus-mt-en-zh",
+        ("en", "ru"): "Helsinki-NLP/opus-mt-en-ru",
+        ("en", "ar"): "Helsinki-NLP/opus-mt-en-ar"
+    }
 
-    def get_translator(self) -> Translator:
-        return self.translator
+    def get_translator(self, source_language: str, target_language: str) -> Translator:
+        key = (source_language, target_language)
+        model_name = self.available_models.get(key)
+
+        if not model_name:
+            raise ValueError(f"No model available for translation from '{source_language}' to '{target_language}'")
+        
+        if key not in self.translators:
+            logger.info(f"Initializing translator for {key}")
+            self.translators[key] = Translator(model_name)
+
+        return self.translators[key]
+    
+translator_factory = TranslatorFactory()
