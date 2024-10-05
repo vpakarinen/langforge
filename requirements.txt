@@ -8,3 +8,7 @@ transformers
 langdetect
 pytest
 pytest-asyncio
+sentencepiece
+torch
+torchvision
+torchaudio
