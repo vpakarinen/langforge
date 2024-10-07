@@ -14,3 +14,6 @@
 - FastAPI
 - Python
 - SQLite
+
+## Author
+- @vpakarinen
