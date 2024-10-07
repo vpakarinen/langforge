@@ -6,18 +6,20 @@ const Navbar = () => {
   return (
     <nav className="bg-blue-600 p-4">
       <div className="container mx-auto flex justify-between items-center">
-        <Link href="/">
-          <a className="flex items-center text-white text-xl">
-            <FaLanguage className="mr-2" />
-            LangForge
-          </a>
+        <Link
+          href="/"
+          className="flex items-center text-white text-xl font-bold"
+        >
+          <FaLanguage className="mr-2" />
+          LangForge
         </Link>
+
         <div className="flex space-x-4">
-          <Link href="/">
-            <a className="text-white hover:underline">Home</a>
+          <Link href="/" className="text-white hover:underline">
+            Home
           </Link>
-          <Link href="/translate">
-            <a className="text-white hover:underline">Translate</a>
+          <Link href="/translate" className="text-white hover:underline">
+            Translate
           </Link>
           <Menu as="div" className="relative inline-block text-left">
             <MenuButton className="text-white hover:underline">More</MenuButton>
@@ -25,27 +27,25 @@ const Navbar = () => {
               <div className="px-1 py-1">
                 <MenuItem>
                   {({ active }) => (
-                    <Link href="/features">
-                      <a
-                        className={`${
-                          active ? 'bg-blue-500 text-white' : 'text-gray-900'
-                        } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
-                      >
-                        Features
-                      </a>
+                    <Link
+                      href="/features"
+                      className={`${
+                        active ? 'bg-blue-500 text-white' : 'text-gray-900'
+                      } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
+                    >
+                      Features
                     </Link>
                   )}
                 </MenuItem>
                 <MenuItem>
                   {({ active }) => (
-                    <Link href="/about">
-                      <a
-                        className={`${
-                          active ? 'bg-blue-500 text-white' : 'text-gray-900'
-                        } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
-                      >
-                        About
-                      </a>
+                    <Link
+                      href="/about"
+                      className={`${
+                        active ? 'bg-blue-500 text-white' : 'text-gray-900'
+                      } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
+                    >
+                      About
                     </Link>
                   )}
                 </MenuItem>
