@@ -38,7 +38,7 @@ const TranslationForm = () => {
 
       reset();
     } catch (err: any) {
-      setError(err.response?.data?.detail || 'An unxepected error occurred');
+      setError(err.response?.data?.detail || 'An unexpected error occurred');
     } finally {
       setLoading(false);
     }
