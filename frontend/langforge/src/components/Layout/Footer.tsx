@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white p-4 text-center">
-      <p>&copy; {new Date().getFullYear()} LangForge. All Rights Reserved.</p>
+    <footer className="p-4 text-center">
+      <p className="text-sm">&copy; {new Date().getFullYear()} LangForge. All Rights Reserved.</p>
     </footer>
   );
 };

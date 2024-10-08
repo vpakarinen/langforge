@@ -10,9 +10,13 @@ interface LayoutProps {
 const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="flex flex-col min-h-screen">
-      <Navbar />
-        <main className="container flex-grow mx-auto p-4">{children}</main>
-      <Footer />
+      <header>
+        <Navbar />
+      </header>
+      <main className="flex-grow container mx-auto p-4 pb-24">{children}</main>
+      <footer className="fixed bottom-0 left-0 w-full p-4 text-center">
+        <Footer />
+      </footer>
     </div>
   );
 };
