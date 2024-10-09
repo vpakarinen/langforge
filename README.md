@@ -15,5 +15,16 @@
 - Python
 - SQLite
 
+## Languages Supported
+Important notice: you can only use English as a source language in the first version
+
+- Spanish
+- Chinese
+- Russian
+- Arabian
+- German
+- Italian
+- French
+
 ## Author
 - @vpakarinen
