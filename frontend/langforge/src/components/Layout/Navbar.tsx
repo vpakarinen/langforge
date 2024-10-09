@@ -5,9 +5,8 @@ const Navbar = () => {
   return (
     <nav className="p-4">
       <div className="container mx-auto flex justify-between items-center">
-        <Link href="/" className="flex items-center text-xl font-bold">
+        <Link href="/" className="flex items-center text-3xl font-bold">
           <FaLanguage className="mr-2" />
-          LangForge
         </Link>
         <div className="flex space-x-4">
           <Link href="/" className="hover:underline">

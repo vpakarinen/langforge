@@ -8,12 +8,12 @@ const HomePage = () => {
           <h1 className="text-5xl font-extrabold text-white-800 mb-4">
             LangForge
           </h1>
-          <p className="text-lg text-white-600 mb-7">
+          <p className="text-lg text-white-600 mb-6">
             Translate text between multiple languages using our powerful translation engine
           </p>
         <Link
           href="/translate"
-          className="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-200"
+          className="inline-block px-4 py-4 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition duration-200"
         >
           Start Translating
         </Link>
