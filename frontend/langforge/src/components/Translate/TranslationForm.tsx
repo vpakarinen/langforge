@@ -26,7 +26,6 @@ interface LanguageOption {
 }
 
 const languages: LanguageOption[] = [
-  { code: 'en', name: 'English' },
   { code: 'es', name: 'Spanish' },
   { code: 'fr', name: 'French' },
   { code: 'de', name: 'German' },
@@ -68,7 +67,7 @@ const TranslationForm = () => {
         translatedText: response.data.translated_text,
         sourceLanguage: response.data.source_language || 'auto-detected',
         targetLanguage: response.data.target_language,
-        modelUsed: response.data.model_used,
+        modelUsed: selectedModel.name,
         timestamp: response.data.timestamp,
       });
 
@@ -83,7 +82,7 @@ const TranslationForm = () => {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
       <div>
-        <label className="block text-gray-700 mb-2" htmlFor="sourceText">
+        <label className="block text-white mb-2" htmlFor="sourceText">
           Source Text
         </label>
         <textarea
@@ -91,12 +90,12 @@ const TranslationForm = () => {
           id="sourceText"
           rows={4}
           placeholder="Enter text to translate"
-          {...(register('sourceText'), { required: true })}
+          {...register('sourceText', { required: true })}
         ></textarea>
       </div>
 
       <div>
-        <label htmlFor="sourceLanguage" className="block text-gray-700 mb-2">
+        <label htmlFor="sourceLanguage" className="block text-white mb-2">
           Source Language
         </label>
         <input
@@ -126,7 +125,7 @@ const TranslationForm = () => {
                 />
               </span>
             </ListboxButton>
-            <ListboxOptions className="absolute w-full py-1 mt-1 overflow-auto text-base bg-white rounded-md shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+            <ListboxOptions className="absolute w-full py-1 mt-1 overflow-auto text-base bg-white rounded-md shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm z-10">
               {languages.map((language) => (
                 <ListboxOption
                   key={language.code}
@@ -165,19 +164,19 @@ const TranslationForm = () => {
       </div>
 
       <div>
-        <label className="block text-gray-700 mb-2">Translation Model</label>
+        <label className="block text-white mb-2">Translation Model</label>
         <Listbox value={selectedModel} onChange={setSelectedModel}>
           <div className="relative">
             <ListboxButton className="relative w-full py-2 pl-3 pr-10 text-left bg-white border border-gray-300 rounded-lg shadow-md cursor-default focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
               <span className="block truncate">{selectedModel.name}</span>
-              <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
+              <span className="flex items-center absolute inset-y-0 right-0 p-2 pointer-events-none">
                 <ChevronUpDownIcon
                   className="w-5 h-5 text-gray-400"
                   aria-hidden="true"
                 />
               </span>
             </ListboxButton>
-            <ListboxOptions className="absolute w-full py-1 mt-1 overflow-auto text-base bg-white rounded-md shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+            <ListboxOptions className="absolute w-full py-1 mt-1 overflow-auto text-base bg-white rounded-md shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm z-10">
               {models.map((model) => (
                 <ListboxOption
                   key={model.id}
@@ -218,8 +217,9 @@ const TranslationForm = () => {
       {error && <p className="text-red-500">{error}</p>}
 
       <button
-        className={`w-full px-4 py-2 font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 ${
-          loading ? 'opacity-50 cursor-not-allowed' : '' }`}
+        className={`w-full px-4 py-2 text-white bg-purple-600 hover:bg-purple-700 transition duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 ${
+          loading ? 'opacity-50 cursor-not-allowed' : ''
+        }`}
         type="submit"
         disabled={loading}
       >

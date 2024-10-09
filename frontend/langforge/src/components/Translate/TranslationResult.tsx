@@ -20,7 +20,7 @@ const TranslationResult = () => {
       </div>
       <div className="text-xs text-gray-500 mt-1">
         <span>
-          Translated AI: {new Date(latest.timestamp).toLocaleString()}
+          Timestamp: {new Date(latest.timestamp).toLocaleString()}
         </span>
       </div>
     </div>
