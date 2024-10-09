@@ -16,7 +16,7 @@
 - SQLite
 
 ## Languages Supported
-Important notice: you can only use English as a source language in the first version
+⚠️ Important notice: atm you can only use English as a source language
 
 - Spanish
 - Chinese
