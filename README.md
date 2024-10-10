@@ -18,7 +18,6 @@
 ## Languages Supported
 ⚠️ Important notice: atm you can only use English as a source language
 
-- Japanese
 - Spanish
 - Chinese
 - Russian
