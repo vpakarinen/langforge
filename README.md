@@ -23,8 +23,10 @@
 - Russian
 - Arabian
 - German
-- Italian
+- Finnish
 - French
+- Italian
+- Hindi
 
 ## Author
 - @vpakarinen
