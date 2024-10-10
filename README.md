@@ -23,8 +23,9 @@
 - Russian
 - Arabian
 - German
-- Italian
 - French
+- Italian
+- Hindi
 
 ## Author
 - @vpakarinen
