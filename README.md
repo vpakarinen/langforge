@@ -8,7 +8,8 @@
 
 ## Future Updates
 - Check that the translations are correct
-- Support multiple source languages
+- Support for multiple source languages
+- More advanced language detection
 
 ## Technology Stack
 - SQL Alchemy
