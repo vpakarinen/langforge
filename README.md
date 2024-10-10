@@ -35,7 +35,7 @@ Important notice ⚠️ you can only use English as a source language atm.
 
 ## Preview Images
 
-![Preview 1](preview/langforge_homepage.png)
+![Preview 1](preview/langforge_homepage_2.png)
 ![Preview 2](preview/langforge_translation.png)
 
 ## How to Run
