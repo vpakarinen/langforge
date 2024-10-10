@@ -3,7 +3,7 @@
 Important notice ⚠️ you can only use English as a source language atm
 
 ## Core Features
-- **Wide Language Range:** Supports major global languages incl. Russian, Chinese, Japanese and Arabian
+- **Wide Language Range:** Supports major global languages incl. Russian, Chinese, Hindi and Arabian
 - **High Accuracy:** Delivers precise translations by leveraging advanced machine learning techniques
 - **Automatic Language Detection:** Intelligently detects the source language of the input text
 - **Context Awareness:** Understands and maintains the context of the source material
