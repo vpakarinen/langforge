@@ -6,6 +6,10 @@
 - **Automatic Language Detection:** Intelligently detects the source language of the input text
 - **Context Awareness:** Understands and maintains the context of the source material
 
+## Future Updates
+- Check that the translations are correct
+- Support multiple source languages
+
 ## Technology Stack
 - SQL Alchemy
 - Typescript
