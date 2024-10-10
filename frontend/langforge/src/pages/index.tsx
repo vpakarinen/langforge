@@ -9,7 +9,7 @@ const HomePage = () => {
           <h1 className="text-4xl font-semibold text-white mb-3">
             LangForge
           </h1>
-          <p className="text-lg text-white mb-6">
+          <p className="text-lg text-white mb-5">
             Translate text between multiple languages using our powerful translation engine
           </p>
         <Link

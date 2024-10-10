@@ -33,7 +33,8 @@ const languages: LanguageOption[] = [
   { code: 'ru', name: 'Russian' },
   { code: 'zh', name: 'Chinese' },
   { code: 'ar', name: 'Arabian' },
-  { code: 'hi', name: 'Hindi' }
+  { code: 'hi', name: 'Hindi' },
+  { code: 'fi', name: 'Finnish' }
 ];
 
 const models = [{ id: 'default', name: 'Default Model' }];
@@ -42,7 +43,6 @@ const TranslationForm = () => {
   const { register, handleSubmit, reset } = useForm<FormInputs>();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
   const addTranslation = useTranslationStore((state) => state.addTranslation);
 
   const [selectedTargetLanguage, setSelectedTargetLanguage] =

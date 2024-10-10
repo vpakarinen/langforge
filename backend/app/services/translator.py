@@ -1,6 +1,8 @@
 from transformers import pipeline, AutoModelForSeq2SeqLM, AutoTokenizer
 import logging
 
+from app.core.config import settings
+
 logger = logging.getLogger(__name__)
 
 class Translator:
@@ -36,20 +38,9 @@ class TranslatorFactory:
     def __init__(self):
         self.translators = {}
 
-    available_models = {
-        ("en", "es"): "Helsinki-NLP/opus-mt-en-es",
-        ("en", "fr"): "Helsinki-NLP/opus-mt-en-fr",
-        ("en", "de"): "Helsinki-NLP/opus-mt-en-de",
-        ("en", "it"): "Helsinki-NLP/opus-mt-en-it",
-        ("en", "zh"): "Helsinki-NLP/opus-mt-en-zh",
-        ("en", "ru"): "Helsinki-NLP/opus-mt-en-ru",
-        ("en", "ar"): "Helsinki-NLP/opus-mt-en-ar",
-        ("en", "hi"): "Helsinki-NLP/opus-mt-en-hi"
-    }
-
     def get_translator(self, source_language: str, target_language: str) -> Translator:
         key = (source_language, target_language)
-        model_name = self.available_models.get(key)
+        model_name = settings.model_mappings.get(key)
 
         if not model_name:
             raise ValueError(f"No model available for translation from '{source_language}' to '{target_language}'")
@@ -57,7 +48,7 @@ class TranslatorFactory:
         if key not in self.translators:
             logger.info(f"Initializing translator for {key}")
             self.translators[key] = Translator(model_name)
-
+            
         return self.translators[key]
     
 translator_factory = TranslatorFactory()
