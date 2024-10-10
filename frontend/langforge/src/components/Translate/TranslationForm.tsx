@@ -33,6 +33,7 @@ const languages: LanguageOption[] = [
   { code: 'ru', name: 'Russian' },
   { code: 'zh', name: 'Chinese' },
   { code: 'ar', name: 'Arabian' },
+  { code: 'hi', name: 'Hindi' }
 ];
 
 const models = [{ id: 'default', name: 'Default Model' }];
@@ -80,13 +81,13 @@ const TranslationForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 p-6 bg-gray-800 rounded-md shadow-lg">
       <div>
-        <label className="block text-white mb-2" htmlFor="sourceText">
+        <label className="block text-white mb-2 text-lg" htmlFor="sourceText">
           Source Text
         </label>
         <textarea
-          className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full p-3 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 bg-gray-700 text-white"
           id="sourceText"
           rows={4}
           placeholder="Enter text to translate"
@@ -95,11 +96,11 @@ const TranslationForm = () => {
       </div>
 
       <div>
-        <label htmlFor="sourceLanguage" className="block text-white mb-2">
+        <label htmlFor="sourceLanguage" className="block text-white mb-2 text-lg">
           Source Language
         </label>
         <input
-          className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full p-3 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500 bg-gray-700"
           type="text"
           id="sourceLanguage"
           placeholder="e.g. en"
@@ -108,13 +109,13 @@ const TranslationForm = () => {
       </div>
 
       <div>
-        <label className="block tect-gray-700 mb-2">Target Language</label>
+        <label className="block tect-gray-700 mb-2 text-lg">Target Language</label>
         <Listbox
           value={selectedTargetLanguage}
           onChange={setSelectedTargetLanguage}
         >
           <div className="relative">
-            <ListboxButton className="relative w-full py-2 pl-3 pr-10 text-left bg-white border border-gray-300 rounded-lg shadow-md cursor-default focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+            <ListboxButton className="relative w-full py-3 pl-3 pr-10 text-left bg-gray-700 text-white border border-gray-600 rounded-md shadow-md cursor-pointer focus:outline-none sm:text-sm">
               <span className="block truncate">
                 {selectedTargetLanguage.name}
               </span>
@@ -164,10 +165,10 @@ const TranslationForm = () => {
       </div>
 
       <div>
-        <label className="block text-white mb-2">Translation Model</label>
+        <label className="block text-white mb-2 text-lg">Translation Model</label>
         <Listbox value={selectedModel} onChange={setSelectedModel}>
           <div className="relative">
-            <ListboxButton className="relative w-full py-2 pl-3 pr-10 text-left bg-white border border-gray-300 rounded-lg shadow-md cursor-default focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+            <ListboxButton className="relative w-full py-3 pl-3 pr-10 text-left bg-gray-700 text-white border border-gray-600 rounded-md shadow-md cursor-pointer focus:outline-none sm:text-sm">
               <span className="block truncate">{selectedModel.name}</span>
               <span className="flex items-center absolute inset-y-0 right-0 p-2 pointer-events-none">
                 <ChevronUpDownIcon

@@ -43,7 +43,8 @@ class TranslatorFactory:
         ("en", "it"): "Helsinki-NLP/opus-mt-en-it",
         ("en", "zh"): "Helsinki-NLP/opus-mt-en-zh",
         ("en", "ru"): "Helsinki-NLP/opus-mt-en-ru",
-        ("en", "ar"): "Helsinki-NLP/opus-mt-en-ar"
+        ("en", "ar"): "Helsinki-NLP/opus-mt-en-ar",
+        ("en", "hi"): "Helsinki-NLP/opus-mt-en-hi"
     }
 
     def get_translator(self, source_language: str, target_language: str) -> Translator:

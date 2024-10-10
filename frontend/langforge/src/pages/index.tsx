@@ -6,10 +6,10 @@ const HomePage = () => {
     <main className="flex items-center justify-center mt-20">
       <div>
         <div className="text-center">
-          <h1 className="text-4xl font-semibold text-white mb-4">
+          <h1 className="text-4xl font-semibold text-white mb-3">
             LangForge
           </h1>
-          <p className="text-lg text-white mb-8">
+          <p className="text-lg text-white mb-6">
             Translate text between multiple languages using our powerful translation engine
           </p>
         <Link

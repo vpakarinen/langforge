@@ -9,7 +9,7 @@ const TranslationResult = () => {
 
   return (
     <div className="mt-6 p-4 border border-green-300 bg-green-50 rounded-lg">
-      <h2 className="text-xl font-semibold mb-2">Translation Result:</h2>
+      <h2 className="text-lg text-gray-800 font-semibold mb-2">Translation result:</h2>
       <p className="text-gray-800 mb-4">{latest.translatedText}</p>
       <div className="text-sm text-gray-600">
         <span>Source Language: {latest.sourceLanguage}</span>
