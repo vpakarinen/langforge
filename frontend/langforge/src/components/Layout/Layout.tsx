@@ -14,9 +14,7 @@ const Layout = ({ children }: LayoutProps) => {
         <Navbar />
       </header>
       <main className="flex-grow container mx-auto p-4 pb-24">{children}</main>
-      <footer className="fixed bottom-0 left-0 w-full p-3 text-center">
         <Footer />
-      </footer>
     </div>
   );
 };

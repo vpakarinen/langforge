@@ -4,8 +4,8 @@ import TranslationForm from '../components/Translate/TranslationForm';
 
 const TranslatePage = () => {
   return (
-    <div className="max-w-xl mx-auto mt-10">
-      <h1 className="text-3xl text-white font-bold mb-6 text-center">Translate Text</h1>
+    <div className="max-w-xl mx-auto mt-5">
+      <h1 className="text-3xl text-white font-bold mb-5 text-center">Translate Text</h1>
       <TranslationForm />
       <TranslationResult />
     </div>
