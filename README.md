@@ -41,7 +41,7 @@ Important notice ⚠️ you can only use English as a source language atm.
 ## How to Run
 
 ### Environment Variables
-Add the following variables to `.env` file:
+Add the following lines to `.env` file (backend):
 
 ```
 DATABASE_URL=langforge.db
@@ -58,11 +58,15 @@ MODEL_EN_HI=Helsinki-NLP/opus-mt-en-hi
 MODEL_EN_FI=Helsinki-NLP/opus-mt-en-fi
 ```
 
+Add the following line to `.env.local` file (frontend):
+<br/>
+`NEXT_PUBLIC_API_URL=http://localhost:8000/api/v1`
+
 ### Backend
-1. Navigate to Backend Dir
-   - `cd backend`
-2. Install Dependencies
+1. Install Dependencies
    - `pip install -r requirements.txt`
+2. Navigate to Backend Dir
+   - `cd backend`
 3. Run the Backend
    - `uvicorn app.main:app --reload`
 ### Frontend
