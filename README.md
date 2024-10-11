@@ -64,7 +64,7 @@ MODEL_EN_FI=Helsinki-NLP/opus-mt-en-fi
 2. Install Dependencies
    - `pip install -r requirements.txt`
 3. Run the Backend
-   - `uvicorn main:app --reload`
+   - `uvicorn app.main:app --reload`
 ### Frontend
 1. Navigate to Frontend Dir
    - `cd frontend`
