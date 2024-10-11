@@ -218,7 +218,7 @@ const TranslationForm = () => {
       {error && <p className="text-red-500">{error}</p>}
 
       <button
-        className={`w-full px-4 py-2 text-white bg-purple-600 hover:bg-purple-700 transition duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 ${
+        className={`w-full px-4 py-2 text-white bg-purple-600 rounded-md hover:bg-purple-700 transition duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 ${
           loading ? 'opacity-50 cursor-not-allowed' : ''
         }`}
         type="submit"

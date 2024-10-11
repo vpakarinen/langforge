@@ -3,18 +3,18 @@ import Link from 'next/link';
 
 const HomePage = () => {
   return (
-    <main className="flex items-center justify-center mt-10">
+    <main className="flex items-center justify-center mt-20">
       <div>
         <div className="text-center">
-          <h1 className="text-4xl font-semibold mb-2">
+          <h1 className="text-4xl font-semibold mb-1">
             LangForge
           </h1>
           <p className="text-lg mb-5">
-            Translate text between multiple languages using our powerful translation engine
+            Translate text between multiple languages using local translation engine
           </p>
         <Link
           href="/translate"
-          className="inline-block px-2 py-5 bg-purple-600 rounded-lg hover:bg-purple-700 transition duration-200"
+          className="inline-block px-4 py-3 bg-purple-600 rounded-lg hover:bg-purple-700 transition duration-200"
         >
           Start Translating
         </Link>
