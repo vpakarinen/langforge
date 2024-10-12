@@ -31,8 +31,8 @@ Supports now multiple source and target languages, check the list for the langua
 
 ## Preview Images
 
-![Preview 1](preview/langforge_homepage_4.png)
-![Preview 2](preview/langforge_translation_4.png)
+![Preview 1](preview/langforge_homepage_5.png)
+![Preview 2](preview/langforge_translation_form_5.png)
 
 ## How to Run
 
