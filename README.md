@@ -1,15 +1,12 @@
 **LangForge** employs state-of-the-art language models fine-tuned specifically for translation tasks, this ensures that translations are not only accurate but also contextually relevant.
 
+Supports now multiple source and target languages, check the list for the language codes.
+
 ## Core Features
 - **Wide Language Range:** Supports major global languages incl. Russian, Chinese, Hindi and Arabian
 - **High Accuracy:** Delivers precise translations by leveraging advanced machine learning techniques
 - **Automatic Language Detection:** Intelligently detects the source language of the input text
 - **Context Awareness:** Understands and maintains the context of the source material
-
-## Future Updates
-- Check that the translations are correct
-- Support for multiple source languages
-- More advanced language detection
 
 ## Technology Stack
 - SQL Alchemy
@@ -20,23 +17,22 @@
 - Python
 - SQLite
 
-## Languages Supported
-Important notice ⚠️ you can only use English as a source language atm.
-
-- Spanish
-- Chinese
-- Russian
-- Arabian
-- German
-- Finnish
-- French
-- Italian
-- Hindi
+## Language Codes
+- Romanian (ro)
+- German (de)
+- Spanish (es)
+- Chinese (zh)
+- Arabian (ar)
+- Russian (ru)
+- Finnish (fi)
+- French (fr)
+- Italian (it)
+- Hindi (hi)
 
 ## Preview Images
 
-![Preview 1](preview/langforge_homepage_3.png)
-![Preview 2](preview/langforge_translation_3.png)
+![Preview 1](preview/langforge_homepage_4.png)
+![Preview 2](preview/langforge_translation_4.png)
 
 ## How to Run
 
@@ -56,6 +52,17 @@ MODEL_EN_RU=Helsinki-NLP/opus-mt-en-ru
 MODEL_EN_AR=Helsinki-NLP/opus-mt-en-ar
 MODEL_EN_HI=Helsinki-NLP/opus-mt-en-hi
 MODEL_EN_FI=Helsinki-NLP/opus-mt-en-fi
+MODEL_EN_RO=Helsinki-NLP/opus-mt-en-ro
+
+MODEL_FR_EN=Helsinki-NLP/opus-mt-fr-en
+MODEL_ES_EN=Helsinki-NLP/opus-mt-es-en
+MODEL_IT_EN=Helsinki-NLP/opus-mt-it-en
+MODEL_DE_EN=Helsinki-NLP/opus-mt-de-en
+MODEL_AR_EN=Helsinki-NLP/opus-mt-ar-en
+MODEL_RU_EN=Helsinki-NLP/opus-mt-ru-en
+MODEL_ZH_EN=Helsinki-NLP/opus-mt-zh-en
+MODEL_HI_EN=Helsinki-NLP/opus-mt-hi-en
+MODEL_FI_EN=Helsinki-NLP/opus-mt-fi-en
 ```
 
 Add the following line to `.env.local` file (frontend):
