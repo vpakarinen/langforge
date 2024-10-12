@@ -17,7 +17,7 @@ Supports now multiple source and target languages, check the list for the langua
 - Python
 - SQLite
 
-## Languages Codes
+## Language Codes
 - Romanian (ro)
 - German (de)
 - Spanish (es)
