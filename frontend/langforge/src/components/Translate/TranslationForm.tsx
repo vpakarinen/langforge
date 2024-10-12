@@ -26,6 +26,7 @@ interface LanguageOption {
 }
 
 const languages: LanguageOption[] = [
+  { code: 'en', name: 'English' },
   { code: 'es', name: 'Spanish' },
   { code: 'fr', name: 'French' },
   { code: 'de', name: 'German' },
@@ -34,7 +35,8 @@ const languages: LanguageOption[] = [
   { code: 'zh', name: 'Chinese' },
   { code: 'ar', name: 'Arabian' },
   { code: 'hi', name: 'Hindi' },
-  { code: 'fi', name: 'Finnish' }
+  { code: 'fi', name: 'Finnish' },
+  { code: 'ro', name: 'Romanian' }
 ];
 
 const models = [{ id: 'default', name: 'Default Model' }];

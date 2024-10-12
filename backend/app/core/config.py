@@ -16,6 +16,17 @@ class Settings(BaseSettings):
     MODEL_EN_AR: str = Field(..., env="MODEL_EN_AR")
     MODEL_EN_HI: str = Field(..., env="MODEL_EN_HI")
     MODEL_EN_FI: str = Field(..., env="MODEL_EN_FI")
+    MODEL_EN_RO: str = Field(..., env="MODEL_EN_RO")
+
+    MODEL_FR_EN: str = Field(..., env="MODEL_FR_EN")
+    MODEL_ES_EN: str = Field(..., env="MODEL_ES_EN")
+    MODEL_IT_EN: str = Field(..., env="MODEL_IT_EN")
+    MODEL_DE_EN: str = Field(..., env="MODEL_DE_EN")
+    MODEL_AR_EN: str = Field(..., env="MODEL_AR_EN")
+    MODEL_RU_EN: str = Field(..., env="MODEL_RU_EN")
+    MODEL_ZH_EN: str = Field(..., env="MODEL_ZH_EN")
+    MODEL_HI_EN: str = Field(..., env="MODEL_HI_EN")
+    MODEL_FI_EN: str = Field(..., env="MODEL_FI_EN")
 
     @property
     def model_mappings(self) -> Dict[Tuple[str, str], str]:
@@ -28,7 +39,18 @@ class Settings(BaseSettings):
             ("en", "ru"): self.MODEL_EN_RU,
             ("en", "ar"): self.MODEL_EN_AR,
             ("en", "hi"): self.MODEL_EN_HI,
-            ("en", "fi"): self.MODEL_EN_FI
+            ("en", "fi"): self.MODEL_EN_FI,
+            ("en", "ro"): self.MODEL_EN_RO,
+            
+            ("fr", "en"): self.MODEL_FR_EN,
+            ("es", "en"): self.MODEL_ES_EN,
+            ("it", "en"): self.MODEL_IT_EN,
+            ("de", "en"): self.MODEL_DE_EN,
+            ("ar", "en"): self.MODEL_AR_EN,
+            ("ru", "en"): self.MODEL_RU_EN,
+            ("zh", "en"): self.MODEL_ZH_EN,
+            ("hi", "en"): self.MODEL_HI_EN,
+            ("fi", "en"): self.MODEL_FI_EN
         }
 
     class Config:
