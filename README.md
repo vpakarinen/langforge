@@ -52,6 +52,17 @@ MODEL_EN_RU=Helsinki-NLP/opus-mt-en-ru
 MODEL_EN_AR=Helsinki-NLP/opus-mt-en-ar
 MODEL_EN_HI=Helsinki-NLP/opus-mt-en-hi
 MODEL_EN_FI=Helsinki-NLP/opus-mt-en-fi
+MODEL_EN_RO=Helsinki-NLP/opus-mt-en-ro
+
+MODEL_FR_EN=Helsinki-NLP/opus-mt-fr-en
+MODEL_ES_EN=Helsinki-NLP/opus-mt-es-en
+MODEL_IT_EN=Helsinki-NLP/opus-mt-it-en
+MODEL_DE_EN=Helsinki-NLP/opus-mt-de-en
+MODEL_AR_EN=Helsinki-NLP/opus-mt-ar-en
+MODEL_RU_EN=Helsinki-NLP/opus-mt-ru-en
+MODEL_ZH_EN=Helsinki-NLP/opus-mt-zh-en
+MODEL_HI_EN=Helsinki-NLP/opus-mt-hi-en
+MODEL_FI_EN=Helsinki-NLP/opus-mt-fi-en
 ```
 
 Add the following line to `.env.local` file (frontend):
