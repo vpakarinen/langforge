@@ -1,16 +1,12 @@
 **LangForge** employs state-of-the-art language models fine-tuned specifically for translation tasks, this ensures that translations are not only accurate but also contextually relevant.
 
-Supports now multiple source and target languages, check the list for the languages codes.
+Supports now multiple source and target languages, check the list for the language codes.
 
 ## Core Features
 - **Wide Language Range:** Supports major global languages incl. Russian, Chinese, Hindi and Arabian
 - **High Accuracy:** Delivers precise translations by leveraging advanced machine learning techniques
 - **Automatic Language Detection:** Intelligently detects the source language of the input text
 - **Context Awareness:** Understands and maintains the context of the source material
-
-## Future Updates
-- Check that the translations are correct
-- More advanced language detection
 
 ## Technology Stack
 - SQL Alchemy
