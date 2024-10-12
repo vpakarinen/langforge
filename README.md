@@ -1,5 +1,7 @@
 **LangForge** employs state-of-the-art language models fine-tuned specifically for translation tasks, this ensures that translations are not only accurate but also contextually relevant.
 
+Supports now multiple source and target languages, check the list for the languages codes.
+
 ## Core Features
 - **Wide Language Range:** Supports major global languages incl. Russian, Chinese, Hindi and Arabian
 - **High Accuracy:** Delivers precise translations by leveraging advanced machine learning techniques
@@ -8,7 +10,6 @@
 
 ## Future Updates
 - Check that the translations are correct
-- Support for multiple source languages
 - More advanced language detection
 
 ## Technology Stack
@@ -20,18 +21,17 @@
 - Python
 - SQLite
 
-## Languages Supported
-Important notice ⚠️ you can only use English as a source language atm.
-
-- Spanish
-- Chinese
-- Russian
-- Arabian
-- German
-- Finnish
-- French
-- Italian
-- Hindi
+## Languages Codes
+- Romanian (ro)
+- German (de)
+- Spanish (es)
+- Chinese (zh)
+- Arabian (ar)
+- Russian (ru)
+- Finnish (fi)
+- French (fr)
+- Italian (it)
+- Hindi (hi)
 
 ## Preview Images
 
