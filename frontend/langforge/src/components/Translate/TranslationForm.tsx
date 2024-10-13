@@ -1,7 +1,7 @@
 /* eslint-disable react/react-in-jsx-scope */
-import { useState } from 'react';
-
 import { useForm, SubmitHandler } from 'react-hook-form';
+import { useState, useRef } from 'react';
+
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/24/solid';
 import {
   Listbox,
@@ -10,8 +10,8 @@ import {
   ListboxOption,
 } from '@headlessui/react';
 
-import api from '../../utils/api';
 import useTranslationStore from '../../store/useTranslationStore';
+import api from '../../utils/api';
 
 interface FormInputs {
   sourceText: string;
@@ -36,23 +36,52 @@ const languages: LanguageOption[] = [
   { code: 'ar', name: 'Arabian' },
   { code: 'hi', name: 'Hindi' },
   { code: 'fi', name: 'Finnish' },
-  { code: 'ro', name: 'Romanian' }
+  { code: 'ro', name: 'Romanian' },
 ];
 
 const models = [{ id: 'default', name: 'Default Model' }];
 
 const TranslationForm = () => {
-  const { register, handleSubmit, reset } = useForm<FormInputs>();
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
   const addTranslation = useTranslationStore((state) => state.addTranslation);
-
   const [selectedTargetLanguage, setSelectedTargetLanguage] =
     useState<LanguageOption>(languages[0]);
+
+  const { register, handleSubmit, reset, setValue } = useForm<FormInputs>();
+  const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
+
   const [selectedModel, setSelectedModel] = useState<{
     id: string;
     name: string;
   }>(models[0]);
+
+  const fileInputRef = useRef<HTMLInputElement | null>(null);
+
+  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (!file) return;
+
+    if (file.type !== 'text/plain') {
+      setError('Only .txt files are supported');
+      return;
+    }
+
+    const reader = new FileReader();
+
+    reader.onload = () => {
+      const text = reader.result as string;
+      setValue('sourceText', text);
+    };
+    reader.onerror = () => {
+      setError('Failed to read the file');
+    };
+
+    reader.readAsText(file);
+  };
+
+  const triggerFileUpload = () => {
+    fileInputRef.current?.click();
+  };
 
   const onSubmit: SubmitHandler<FormInputs> = async (data) => {
     setLoading(true);
@@ -83,7 +112,10 @@ const TranslationForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 p-6 bg-gray-800 rounded-md shadow-lg">
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="space-y-6 p-6 bg-gray-800 rounded-md shadow-lg"
+    >
       <div>
         <label className="block text-white mb-2 text-lg" htmlFor="sourceText">
           Source Text
@@ -96,9 +128,31 @@ const TranslationForm = () => {
           {...register('sourceText', { required: true })}
         ></textarea>
       </div>
-
       <div>
-        <label htmlFor="sourceLanguage" className="block text-white mb-2 text-lg">
+        <label className="text-xs block mb-2">Upload Text File</label>
+        <button
+          className="px-2 py-1 text-sm bg-gray-200 text-gray-700 rounded hover:bg-gray-300 focus:outline-none"
+          type="button"
+          onClick={triggerFileUpload}
+        >
+          Choose File
+        </button>
+        <input
+          className="hidden"
+          type="file"
+          accept=".txt"
+          ref={fileInputRef}
+          onChange={handleFileChange}
+        />
+        <p className="text-xs text-gray-500 mt-2">
+          Only .txt files are supported
+        </p>
+      </div>
+      <div>
+        <label
+          htmlFor="sourceLanguage"
+          className="block text-white mb-2 text-lg"
+        >
           Source Language
         </label>
         <input
@@ -109,9 +163,10 @@ const TranslationForm = () => {
           {...register('sourceLanguage')}
         />
       </div>
-
       <div>
-        <label className="block tect-gray-700 mb-2 text-lg">Target Language</label>
+        <label className="block tect-gray-700 mb-2 text-lg">
+          Target Language
+        </label>
         <Listbox
           value={selectedTargetLanguage}
           onChange={setSelectedTargetLanguage}
@@ -165,9 +220,10 @@ const TranslationForm = () => {
           </div>
         </Listbox>
       </div>
-
       <div>
-        <label className="block text-white mb-2 text-lg">Translation Model</label>
+        <label className="block text-white mb-2 text-lg">
+          Translation Model
+        </label>
         <Listbox value={selectedModel} onChange={setSelectedModel}>
           <div className="relative">
             <ListboxButton className="relative w-full py-3 pl-3 pr-10 text-left bg-gray-700 text-white border border-gray-600 rounded-md shadow-md cursor-pointer focus:outline-none sm:text-sm">
