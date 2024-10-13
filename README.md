@@ -1,6 +1,6 @@
 **LangForge** employs state-of-the-art language models fine-tuned specifically for translation tasks.
 
-Supports now multiple source and target languages, check the list for the language codes.
+Supports now multiple source and target languages and the file upload.
 
 ## Core Features
 - **Wide Language Range:** Supports major global languages incl. Russian, Chinese, Hindi and Arabian
@@ -32,7 +32,7 @@ Supports now multiple source and target languages, check the list for the langua
 ## Preview Images
 
 ![Preview 1](preview/langforge_homepage_5.png)
-![Preview 2](preview/langforge_translation_form_5.png)
+![Preview 2](preview/langforge_translation_w_file_upload.png)
 
 ## How to Run
 
