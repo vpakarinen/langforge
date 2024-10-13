@@ -1,4 +1,4 @@
-**LangForge** employs state-of-the-art language models fine-tuned specifically for translation tasks, this ensures that translations are not only accurate but also contextually relevant.
+**LangForge** employs state-of-the-art language models fine-tuned specifically for translation tasks.
 
 Supports now multiple source and target languages, check the list for the language codes.
 
