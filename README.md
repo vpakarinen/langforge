@@ -31,8 +31,8 @@ Supports now multiple source and target languages and the file upload.
 
 ## Preview Images
 
-![Preview 1](preview/langforge_homepage_5.png)
-![Preview 2](preview/langforge_translation_w_file_upload.png)
+![Preview 1](preview/langforge_home_update.png)
+![Preview 2](preview/langforge_translation_update.png)
 
 ## How to Run
 
