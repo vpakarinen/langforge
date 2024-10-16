@@ -1,6 +1,6 @@
 **LangForge** employs state-of-the-art language models fine-tuned specifically for translation tasks.
 
-Supports now multiple source and target languages and the file upload.
+Supports now multiple source and target languages.
 
 ## Core Features
 - **Wide Language Range:** Supports major global languages incl. Russian, Chinese, Hindi and Arabian
@@ -78,7 +78,7 @@ Add the following line to `.env.local` file (frontend):
    - `uvicorn app.main:app --reload`
 ### Frontend
 1. Navigate to Frontend Dir
-   - `cd frontend`
+   - `cd frontend/langforge`
 2. Install Dependencies
    - `npm install`
 3. Run the Backend
